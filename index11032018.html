@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Cash2</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <style>
+    a:visited
+    {
+        color: blue !important;
+    }
+
+    a:active
+    {
+        color: blue !important;
+    }
+
+    a
+    {
+        color: blue !important;
+    }
+
+    body
+    {
+      background: #f8f8f8;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      font-size: 20px;
+    }
+
+    h2
+    {
+      background: #eaeaea;
+      font-weight: bold;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    h3
+    {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    img
+    {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    p
+    {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    table
+    {
+      table-layout: fixed;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    
+    table, th, td {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 25px;
+    }
+
+    #contactDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    #container
+    {
+      text-align: center;
+    }
+
+    #generalInformationDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+    
+    #faqDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #launchDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 35px;
+      padding-bottom: 35px;
+      background: #eaeaea;
+    }
+    
+    #logo
+    {
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+    }
+
+    #miningInformationDiv
+    {
+      padding-left: 20px;
+      padding-right: 20px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #navigationDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #technicalDetailsDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #paperWalletDiv
+    {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    .bold
+    {
+      font-weight: bold;
+    }
+
+    .col-centered
+    {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .extra-small
+    {
+      padding: 5px;
+      font-size: 18px;
+    }
+
+    .font20
+    {
+      font-size: 20px;
+    }
+
+    .font25
+    {
+      font-size: 25px;
+    }
+
+    .font27
+    {
+      font-size: 27px;
+    }
+
+    .font37
+    {
+      font-size: 37px;
+    }
+
+    .font50
+    {
+      font-size: 50px;
+    }
+         
+    .green
+    {
+      color:#00ff00;
+    }
+    
+    .hidden-xs-down
+    {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    
+    .monospace
+    {
+      font-family: monospace;
+    }
+
+    .red
+    {
+      color:#ff0000;
+    }
+    
+    .serif
+    {
+      font-family: serif;
+    }
+
+    .small
+    {
+      padding: 5px;
+      font-size: 21px;
+    }
+
+    .table-fixed
+    {
+      table-layout: fixed;
+    }
+
+    .table td
+    {
+      border: none;
+    }
+    
+    .underline
+    {
+      text-decoration: underline;
+    }
+    
+    <!------------------------Countdown Timer-------------------------->
+    
+    #clockdiv
+    {
+      width: 50%;
+      display: inline-block;
+      font-weight: 100;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    #clockdiv > div
+    {
+      padding: 5px;
+      display: inline-block;
+      width: 100px;
+    }
+
+    #clockdiv div > span
+    {
+      padding: 20px;
+      border-radius: 3px;
+      background: #FF0000;
+      color: #FFFFFF;
+      display: inline-block;
+      width: 80px;
+    }
+
+    .days
+    {
+      font-size: 25px;
+    }
+
+    .green
+    {
+      color: #00ff00;
+    }
+    
+    .hours
+    {
+      font-size: 25px;
+    }
+
+    .minutes
+    {
+      font-size: 25px;
+    }
+    
+    .seconds
+    {
+      font-size: 25px;
+    }
+  </style>
+</head>
+<body>
+  <img id="logo" src="cash2Logo100x100.svg">
+  <h1 class="font50 serif bold">Cash2</h1>
+  <h5>Cash Version 2</h5>
+  <br/>
+  <div id="launchDiv">
+    <h3>December 5, 2018</h3>
+    <h3>9:00 am EST</h3>
+    <br/>
+    <div id="clockdiv">
+      <div class="redBox">
+        <span class="days"></span>
+        <div class="small">days</div>
+      </div>
+      <div class="redBox">
+        <span class="hours"></span>
+        <div class="small">hrs</div>
+      </div>
+      <div class="redBox">
+        <span class="minutes"></span>
+        <div class="small">mins</div>
+      </div>
+      <div class="redBox">
+        <span class="seconds"></span>
+        <div class="small">secs</div>
+      </div>
+    </div>
+  </div>
+  <div id="navigationDiv">
+    <p><a href="#generalInformation">General Information</a></p>
+    <p><a href="#miningInformation">Mining Information</a></p>
+    <p><a href="#contact">Contact Us</a></p>
+    <p><a href="https://blocks.cash2.org" target="_blank">Block Explorer</a></p>
+    <p><a href="https://cash2.org/Cash2+Whitepaper+English+11012018.pdf" target="_blank">Whitepaper</a></p>
+    <p><a href="#technicalDetails">Technical Details</a></p>
+    <p><a href="#paperWallet">Paper Wallet</a></p>
+    <p><a href="#socialMedia">Social Media</a></p>
+    <p><a href="https://github.com/cash2/cash2" target="_blank">Source Code</a></p>
+    <p><a href="#faq">FAQ</a></p>
+  </div>
+  <div id="generalInformationDiv">
+    <div id="generalInformation"></div>
+    <h2>General Information</h2>
+    <br/>
+    <h4><span class="font27 serif">Cash2</span> is a new cryptocurrency similar to cash</h4>
+    <br/>
+    <div class="col-lg-5 col-md-5 col-sm-5 col-centered">
+      <table>
+        <tr>
+          <th></th>
+          <th class="hidden-xs-down font27 serif">Cash2</th>
+          <th class="hidden-xs-down">Cash</th>
+        </tr>
+        <tr>
+          <td class="hidden-xs-down small">
+            Hard to Counterfeit
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Divisible
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Fungible
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Easy to Transact
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Usable Online
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="red bold">
+            &#10007
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Decentralized
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="red bold">
+            &#10007
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Limited Supply
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="red bold">
+            &#10007
+          </td>
+        </tr>
+        <tr>
+          <td class="small">
+            Borderless
+          </td>
+          <td class="green bold">
+            &#x2713
+          </td>
+          <td class="red bold">
+            &#10007
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="miningInformationDiv">
+    <div id="miningInformation"></div>
+    <h2>Mining Information</h2>
+    <br/>
+    <div class="col-lg-7 col-md-7 col-sm-7 col-centered">
+      <p><span class="underline">USA East Mining Pool</span><br/><a href="https://pool1.cash2.org" target="_blank" >https://pool1.cash2.org</a></p>
+      <br/>
+      <p><span class="underline">Recommended Hardware</span><br/>Antminer A3 by Bitmain</p>
+    </div>
+    <br/>
+    <p>*The Antminer A3 is no longer for sale on Bitmain's website but can still be purchased through Bitmain's chat support or by emailing Ziqi Liu at ziqi.liu01@bitmain.com to open a support ticket.</p>
+    <p>*pool1.cash2.org is currently only for testing purposes.  The test blockchain will be replaced with the real blockchain on December 5, 2018 at 9:00 am EST</p>
+    <br/>
+  </div>
+  <div id="contactDiv">
+    <div id="contact"></div>
+    <h2>Contact Us</h2>
+      <p class="small">Paul Aphivantrakul</p>
+      <p class="small">email<br/>cash2@protonmail.com</p>
+      <p class="small">LINE id<br/>gtg502x</p>
+  </div>
+  <div id="technicalDetailsDiv">
+    <div id="technicalDetails"></div>
+    <h2>Technical Details</h2>
+    <br/>
+    <div class="col-lg-7 col-md-7 col-sm-7 col-centered">
+      <table class="table">
+        <tr>
+          <td><h4>Goals</h4></td>
+          <td class="small">fast, free, fungible</td>
+        </tr>
+        <tr>
+          <td><h4>Max Supply</h4></td>
+          <td class="small">15,000,000</td>
+        </tr>
+        <tr>
+          <td><h4>Transaction Fee</h4></td>
+          <td class="small">0</td>
+        </tr>
+        <tr>
+          <td><h4>Block Time</h4></td>
+          <td class="small">9 seconds</td>
+        </tr>
+        <tr>
+          <td><h4>Code Family</h4></td>
+          <td class="small">Cryptonote</td>
+        </tr>
+        <tr>
+          <td><h4>Hashing Algorithm</h4></td>
+          <td class="small">BLAKE2b</td>
+        </tr>  
+        <tr>
+          <td><h4>Block Reward</h4></td>
+          <td class="small">0.894069671 or less</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="paperWalletDiv">
+    <div id="paperWallet"></div>
+    <br/>
+    <input type="hidden" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
+    <h2 class="bold">Paper Wallet</h2>
+    <br/>
+    <div class="row">
+      <div class="col s12">
+        <div>
+          <div class="center-align">
+            <h5 id="address" class="bold">Address</h5>
+            <pre class="small" id="address_widget"> </pre>                    
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div class="row">
+      <div class="col s12">
+        <div>
+          <div class="center-align">
+            <h5 class="bold">Spend private key</h5>
+            <p><pre class="small" id="spend_key_widget"> </pre></p>
+            <br/>
+            <h5 class="bold">View private key</h5>
+            <p><pre class="small" id="view_key_widget"> </pre></p>
+            <br/>
+            <span class="extra-small">Please keep private keys safe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+  </div>
+  <div id="socialMediaDiv">
+    <div id="socialMedia"></div>
+    <h2 class="bold">Social Media</h2>
+    <br/>
+    <p><a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube</a></p>
+    <p><a href="https://www.reddit.com/r/Cash2" target="_blank">Reddit</a></p>
+    <p><a href="https://twitter.com/aphivantrakul" target="_blank">Twitter</a></p>
+    <br/>
+  </div>
+  <div id="faqDiv">
+    <div id="faq"></div>
+    <h2 class="bold">FAQ</h2>
+    <br/>
+    <h4 class="bold">What is <span class="font27 serif">Cash2</span>?</h3>
+    <p class="small"><span class="font25 serif">Cash2</span> is a new cryptocurrency with all the useful properties of cash but with added beneficial features.<br/>The goal is for <span class="font25 serif">Cash2</span> to become a mainstream digital currency used for day-to-day purchases.</p>
+    <br/>
+    <h4 class="bold">Is <span class="font27 serif">Cash2</span> a Scam?</h4>
+    <p class="small">No. <span class="font25 serif">Cash2</span> will have no premine, and everyone has an equal opportunity to mine, buy, and sell <span class="font25 serif">Cash2</span>.</p>
+    <br/>
+    <h4 class="bold">How Can I Mine <span class="font27 serif">Cash2</span>?</h4>
+    <p class="small">The Antminer A3 by Bitmain is recommend for mining <span class="font25 serif">Cash2</span>.<br/>The Antminer A3 uses the BLAKE2b hashing algorithm.<br/>Currently, the Antminer A3 is not listed for sale on Bitmain's website.<br/>However, the Antminer A3 can still be purchased through Bitamin's chat support or by emailing Ziqi Liu at ziqi.liu01@bitmain.com to open a support ticket.</br>The price for one Antminer A3 is $145 USD plus shipping.<br/>Please check out our YouTube videos for help with mining.</p>
+    <br/>
+    <h4 class="bold">How Can I Buy <span class="font27 serif">Cash2</span>?</h4>
+    <p class="small"><span class="font25 serif">Cash2</span> will be listed on exchanges after it is launched.<br/>Please check back for a list of exchanges.</p>
+    <br/>
+    <h4 class="bold">Is <span class="font27 serif">Cash2</span> a Privacy Coin?</h4>
+    <p class="small">No. <span class="font25 serif">Cash2</span> provides only a basic level of privacy for improved fungibility.<br/>The focus of <span class="font25 serif">Cash2</span> is towards becoming a mainstream digital currency and not towards absolute privacy.</p>
+    <br/>
+    <h4 class="bold">Why does <span class="font27 serif">Cash2</span> use Blake2b instead of Cryptonight?</h4>
+    <p class="small">Fast block times requires a fast hashing algorithm.<br/>We needed an algorithm faster than CryptoNight, and BLAKE2b is one of the fastest algorithms available.</p>
+  </div>
+  <script>
+    // Javascript for countdown timer
+    function getTimeRemaining(endtime) {
+      var t = Date.parse(endtime) - Date.parse(new Date());
+      var seconds = Math.floor((t / 1000) % 60);
+      var minutes = Math.floor((t / 1000 / 60) % 60);
+      var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+      var days = Math.floor(t / (1000 * 60 * 60 * 24));
+      return {
+        'total': t,
+        'days': days,
+        'hours': hours,
+        'minutes': minutes,
+        'seconds': seconds
+      };
+    }
+
+    function initializeClock(id, endtime) {
+      var clock = document.getElementById(id);
+      var daysSpan = clock.querySelector('.days');
+      var hoursSpan = clock.querySelector('.hours');
+      var minutesSpan = clock.querySelector('.minutes');
+      var secondsSpan = clock.querySelector('.seconds');
+
+      function updateClock() {
+        var t = getTimeRemaining(endtime);
+
+        daysSpan.innerHTML = t.days;
+        hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+        minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+        secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+        if (t.total <= 0) {
+          clearInterval(timeinterval);
+        }
+      }
+
+      updateClock();
+      var timeinterval = setInterval(updateClock, 1000);
+    }         
+
+    var currentDate = new Date();
+    var futureDate  = new Date(currentDate.getFullYear(), 11, 5, 9, 0);
+    var deadline = new Date(Date.parse(futureDate));
+    initializeClock('clockdiv', deadline);
+  </script>
+  <script src="cash2Address.js">// Javascript for generating address</script>
+</body>
+</html>
