@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Cash2</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <style>
+    a:visited
+    {
+      color: blue !important;
+    }
+
+    a:active
+    {
+      color: blue !important;
+    }
+
+    a
+    {
+      color: blue !important;
+    }
+
+    body
+    {
+      background: #f8f8f8;
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 35px;
+      font-size: 18px;
+    }
+
+    h2
+    {
+      background: #eaeaea;
+      font-weight: bold;
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    h3
+    {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+
+    img
+    {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    p
+    {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    table
+    {
+      table-layout: fixed;
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+
+    table td
+    {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border: none;
+    }
+
+    table th
+    {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    #contactDiv
+    {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    #container
+    {
+      text-align: center;
+    }
+
+    #generalInformationDiv
+    {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+    
+    #faqDiv
+    {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #languageSelect
+    {
+      width: 180px;
+      margin: 0 auto;
+    }
+ 
+    #logo
+    {
+      height: 35px;
+      line-height: 35px;
+      display: inline-block;
+      font-size: 18px;
+    }
+
+    #miningInformationDiv
+    {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #navigationDiv
+    {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #technicalDetailsDiv
+    {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #paperWalletDiv
+    {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+
+    #technicalDetailsTable tr, td
+    {
+      padding-left: 20px;
+      padding-right: 20px;
+      table-layout: fixed;
+    }
+    
+    .bold
+    {
+      font-weight: bold;
+    }
+
+    .col-centered
+    {
+      float: none;
+      margin: 0 auto;
+    }
+
+    .font20
+    {
+      font-size: 20px;
+    }
+
+    .font21
+    {
+      font-size: 21px;
+    }
+
+    .font22
+    {
+      font-size: 22px;
+    }
+
+    .font23
+    {
+      font-size: 23px;
+    }
+
+    .font24
+    {
+      font-size: 24px;
+    }
+
+    .font25
+    {
+      font-size: 25px;
+    }
+
+    .font26
+    {
+      font-size: 26px;
+    }
+
+    .font27
+    {
+      font-size: 27px;
+    }
+
+    .font28
+    {
+      font-size: 28px;
+    }
+
+    .font29
+    {
+      font-size: 29px;
+    }
+
+    .font30
+    {
+      font-size: 30px;
+    }
+
+    .font37
+    {
+      font-size: 37px;
+    }
+
+    .font50
+    {
+      font-size: 50px;
+    }
+         
+    .green
+    {
+      color:#00ff00;
+    }
+  
+    .monospace
+    {
+      font-family: monospace;
+    }
+
+    .red
+    {
+      color:#ff0000;
+    }
+    
+    .serif
+    {
+      font-family: serif;
+    }
+
+    .table-fixed
+    {
+      table-layout: fixed;
+    }
+
+    .underline
+    {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <br/>
+  <img id="logo" src="cash2Logo100x100.svg">
+  <h1 class="font50 serif bold">Cash2</h1>
+  <h5 id="cashVersion2">Cash Version 2</h5>
+  <br/>
+
+  <div id="announcementDiv">
+    <!-- <h1 class="green">Jan 7, 2019<br/>Please update to Cash2 Wallet Version 2</h1> -->
+  </div>
+
+  <div id="navigationDiv">
+    <p><a href="#generalInformation" id="generalInformationLink" class="font20">General Information</a></p>
+    <p><a href="#miningInformation" id="miningInformationLink" class="font20">Mining Information</a></p>
+    <p><a href="#contact" id="contactUsLink" class="font20">Contact Us</a></p>
+    <p><a href="#exchanges" id="exchangesLink" class="font20">Exchanges</a></p>
+    <p><a href="https://blocks.cash2.org" target="_blank" id="blockExplorerLink" class="font20">Block Explorer</a></p>
+    <p><a href="#downloads" id="downloadsLink" class="font20">Downloads</a></p>
+    <p><a href="https://cash2.org/Cash2+Whitepaper+English+12182018.pdf" target="_blank" id="whitePaperLink" class="font20">Whitepaper</a></p>
+    <p><a href="#technicalDetails" id="technicalDetailsLink" class="font20">Technical Details</a></p>
+    <p><a href="#paperWallet" id="paperWalletLink" class="font20">Paper Wallet</a></p>
+    <p><a href="#socialMedia" id="socialMediaLink" class="font20">Social Media</a></p>
+    <p><a href="https://github.com/cash2/cash2" target="_blank" id="sourceCodeLink" class="font20">Source Code</a></p>
+    <p><a href="#faq" id="faqLink" class="font20">FAQ</a></p>
+  </div>
+  <br/>
+  <div id="generalInformationDiv">
+    <div id="generalInformation"></div>
+    <h2 id="generalInformationH2">General Information</h2>
+    <br/>
+    <br/>
+    <h4 id="description1"><span class="font27 serif">Cash2</span> is a new cryptocurrency similar to cash</h4>
+    <br/>
+    <div class="col-lg-5 col-md-5 col-sm-5 col-centered">
+      <table>
+        <tr>
+          <th></th>
+          <th class="serif font23">Cash2</th>
+          <th id="cash" class="font20">Cash</th>
+        </tr>
+        <tr>
+          <td id="hardToCounterfeit" class="font20">Hard to Counterfeit</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td id="divisible" class="font20">Divisible</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td id="fungible" class="font20">Fungible</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td id="easyToTransact" class="font20">Easy to Transact</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+        </tr>
+        <tr>
+          <td id="usableOnline" class="font20">Usable Online</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="red bold font22">
+            &#10007
+          </td>
+        </tr>
+        <tr>
+          <td id="decentralized" class="font20">Decentralized</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="red bold font22">
+            &#10007
+          </td>
+        </tr>
+        <tr>
+          <td id="limitedSupply" class="font20">Limited Supply</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="red bold font22">
+            &#10007
+          </td>
+        </tr>
+        <tr>
+          <td id="borderless" class="font20">Borderless</td>
+          <td class="green bold font22">
+            &#x2713
+          </td>
+          <td class="red bold font22">
+            &#10007
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <br/>
+
+  <div id="miningInformationDiv">
+    <div id="miningInformation"></div>
+    <h2 id="miningInformationH2">Mining Information</h2>
+    <br/>
+    <br/>
+    <span class="font20">USA East Mining Pool</span>
+    <br/>
+    <a href="https://pool1.cash2.org" target="_blank" class="font20">https://pool1.cash2.org</a>
+    <br/>
+    <br/>
+    <br/>
+    <span id="recommendedHardware" class="font20">Recommended Hardware</span>
+    <br/>
+    <a href="http://www.innosilicon.com/html/s11-miner/index.html" target="_blank" class="font20">
+      Innosilicon S11
+    </a>
+    <br/>
+    <a href="https://shop.bitmain.com/product/detail?pid=000201811071659320918shK4zCH068F" target="_blank" class="font20">
+      Bitmain Antminer A3
+    </a>
+    <br/>
+    <a href="https://shop.bitmain.com/product/detail?pid=000201809111802447941Bf38AO30604" target="_blank" class="font20">
+      Bitmain APW7 Power Supply
+    </a>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+  <div id="contactDiv">
+    <div id="contact"></div>
+    <h2 id="contactUsH2">Contact Us</h2>
+      <br/>
+      <br/>
+      <span class="font20">Paul Aphivantrakul</span>
+      <br/>
+      <br/>
+      <span class="font20">cash2@protonmail.com</span>
+      <br/>
+      <br/>
+      <br/>
+  </div>
+  <div id="exchangesDiv">
+    <div id="exchanges"></div>
+    <h2 id="exchangesH2">Exchanges</h2>
+      <br/>
+      <br/>
+      <p class="font20">We are working hard to get Cash2 listed on an exchange.</p>
+      <p class="font20">For now, please use our <a href="https://discord.gg/ccqVecc" target="_blank">Discord channel</a> for trading Cash2.</p>
+      <br/>
+      <br/>
+      <br/>
+  </div>
+  <div id="downloadsDiv">
+    <div id="downloads"></div>
+    <h2 id="downloadsH2">Downloads</h2>
+      <br/>
+      <br/>
+      <h3>Cash2 Wallet</h3>
+      <p><a href="https://cash2.org/cash2-Windows-x64-version4.zip" target="_blank" class="font20">Windows x64 Version 4</a></p>
+      <p><a href="https://cash2.org/cash2-Ubuntu-x64-version4.tar.gz" target="_blank" class="font20">Ubuntu x64 Version 4</a></p>
+      <p><a href="https://cash2.org/cash2-macOS-x64-version4.tar.gz" target="_blank" class="font20">macOS x64 Version 4</a></p>
+      <br/>
+      <br/>
+      <h3>Blockchain Files</h3>
+      <p>To speed up blockchain synchronization, please copy this cash2 folder into <br/>"C:\Users\[yourWindowsUserName]\AppData\Roaming"</p>
+      <a href="https://s3.amazonaws.com/cash2.org/cash2.zip" target="_blank" class="font20">cash2.zip</a>
+      <br/>
+      <br/>
+      <br/>
+      <p class="font20">Must first run cash2d</p>
+      <p class="font20">Run simplewallet to check balance or to send money</p></p>
+      <br/>
+  </div>
+  <div id="technicalDetailsDiv">
+    <div id="technicalDetails"></div>
+    <h2 id="technicalDetailsH2">Technical Details</h2>
+    <br/>
+    <br/>
+    <div class="col-lg-7 col-md-7 col-sm-7 col-centered">
+      <table id="technicalDetailsTable">
+        <tr>
+          <td id="goals" class="font20">Goals</td>
+          <td id="fastFreeFungible" class="font20">fast, free, fungible</td>
+        </tr>
+        <tr>
+          <td id="maxSupply" class="font20">Max Supply</td>
+          <td class="font20">15,000,000</td>
+        </tr>
+        <tr>
+          <td id="transactionFee" class="font20">Transaction Fee</td>
+          <td class="font20">0</td>
+        </tr>
+        <tr>
+          <td id="blockTime" class="font20">Block Time</td>
+          <td class="font20">9 <span id="seconds2">seconds</span></td>
+        </tr>
+        <tr>
+          <td id="codeFamily" class="font20">Code Family</td>
+          <td class="font20">CryptoNote</td>
+        </tr>
+        <tr>
+          <td id="hashingAlgorithm" class="font20">Hashing Algorithm</td>
+          <td class="font20">BLAKE2b</td>
+        </tr>  
+        <tr>
+          <td id="blockReward" class="font20">Block Reward</td>
+          <td class="font20">0.894069671 <span id="orLess">or less</span></td>
+        </tr>
+      </table>
+    </div>
+    <br/>
+  </div>
+  <div id="paperWalletDiv">
+    <div id="paperWallet"></div>
+    <br/>
+    <input type="hidden" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
+    <h2 id="paperWalletH2" class="bold">Paper Wallet</h2>
+    <br/>
+    <br/>
+    <div>
+      <div class="col s12">
+        <div>
+          <div class="center-align">
+            <h5 id="address" class="bold">Address</h5>
+            <pre id="address_widget" class="font21"> </pre>                    
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <div>
+      <div class="col s12">
+        <div>
+          <div class="center-align">
+            <h5 id="spendPrivateKey" class="bold">Spend private key</h5>
+            <p><pre id="spend_key_widget" class="font21"> </pre></p>
+            <br/>
+            <h5 id="viewPrivateKey" class="bold">View private key</h5>
+            <p><pre id="view_key_widget" class="font21"> </pre></p>
+            <br/>
+            <span id="keepSafe" class="font20">Please keep private keys safe</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+  </div>
+  <div id="socialMediaDiv">
+    <div id="socialMedia"></div>
+    <h2 id="socialMediaH2" class="bold">Social Media</h2>
+    <br/>
+    <p><a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank" class="font20">YouTube</a></p>
+    <p><a href="https://www.reddit.com/r/Cash2" target="_blank" class="font20">Reddit</a></p>
+    <p><a href="https://twitter.com/aphivantrakul" target="_blank" class="font20">Twitter</a></p>
+    <p><a href="https://bitcointalk.org/index.php?topic=5072952.msg48090752#msg48090752" target="_blank" class="font20">Bitcointalk</a></p>
+    <p><a href="https://discord.gg/ccqVecc" target="_blank" class="font20">Discord</a></p>
+    <br/>
+  </div>
+  <div id="faqDiv">
+    <div id="faq"></div>
+    <h2 id="faqH2" class="bold">FAQ</h2>
+    <br/>
+    <br/>
+    <h4 id="whatIsCash2" class="bold">What is <span class="font27 serif">Cash2</span>?</h4>
+    <p id="whatIsCash2Answer" class="font20"><span class="font22 serif">Cash2</span> is a new cryptocurrency with all the useful properties of cash but with added beneficial features.<br/>The goal is for <span class="font22 serif">Cash2</span> to become a mainstream digital currency used for day-to-day purchases.</p>
+    <br/>
+    <br/>
+    <h4 id="scam" class="bold">Is <span class="font27 serif">Cash2</span> a Scam?</h4>
+    <p id="scamAnswer" class="font20">No. <span class="font22 serif">Cash2</span> will have no premine, and everyone has an equal opportunity to mine, buy, and sell <span class="font22 serif">Cash2</span>.</p>
+    <br/>
+    <br/>
+    <h4 id="howToMine" class="bold">How Can I Mine <span class="font27 serif">Cash2</span>?</h4>
+    <p id="howToMineAnswer" class="font20">The <a href="http://www.innosilicon.com/html/s11-miner/index.html" target="_blank" class="font20">Innosilicon S11</a> and <a href="https://shop.bitmain.com/product/detail?pid=000201811071659320918shK4zCH068F" target="_blank">Antminer A3 by Bitmain</a> are recommended for mining <span class="font22 serif">Cash2</span>.<br/>Please check out our <a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube channel</a> for help with mining.</p>
+    <br/>
+    <br/>
+    <h4 id="howToBuy" class="bold">How Can I Buy <span class="font27 serif">Cash2</span>?</h4>
+    <p id="howToBuyAnswer" class="font20"><span class="font22 serif">Cash2</span> will be listed on exchanges after it is launched.<br/>Please check back for a list of exchanges.<br/>For now, please use our <a href="https://discord.gg/ccqVecc" target="_blank">Discord channel</a> for trading <span class="font22 serif">Cash2</span>.</p>
+    <br/>
+    <br/>
+    <h4 id="privacyCoin" class="bold">Is <span class="font27 serif">Cash2</span> a Privacy Coin?</h4>
+    <p id="privacyCoinAnswer" class="font20">No. <span class="font22 serif">Cash2</span> provides only a basic level of privacy for improved fungibility.<br/>The focus of <span class="font22 serif">Cash2</span> is towards becoming a mainstream digital currency and not towards absolute privacy.</p>
+    <br/>
+    <br/>
+    <h4 id="whyChangeHashingAlgorithm" class="bold">Why does <span class="font27 serif">Cash2</span> use BLAKE2b instead of Cryptonight?</h4>
+    <p id="whyChangeHashingAlgorithmAnswer" class="font20">Fast block times requires a fast hashing algorithm, and BLAKE2b is one of the fastest algorithms available.</p>
+    <br/>
+    <br/>
+  </div>
+
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <script src="cash2Address.js">// Javascript for generating address</script>
+</body>
+</html>
