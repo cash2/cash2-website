@@ -1,0 +1,93 @@
+@media screen and (max-width:400px)
+{
+
+h1
+{
+	font-size: 3rem;
+}
+
+h2
+{
+	font-size: 2rem;
+}
+
+h3
+{
+	font-size: 2rem;
+}
+
+pre
+{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+table tr td
+{
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+table tr th
+{
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+#blockSpotLogo
+{
+	height: 8rem;
+}
+
+#coinGeckoLogo
+{
+	height: 6rem;
+}
+
+#coinMarketCapLogo
+{
+	height: 4rem;
+}
+
+#contactUsDiv, 
+#disclaimerDiv, 
+#downloadsDiv,
+#exchangesDiv,
+#faqDiv,
+#generalInformationDiv1,
+#generalInformationDiv2,
+#generalInformationDiv3,
+#miningDiv,
+#paperWalletDiv,
+#priceDiv,
+#socialMediaDiv,
+#technicalDetailsDiv
+{
+	padding-left: 2rem;
+	padding-right: 2rem;
+	width: 100%;
+}
+
+#priceHeaderSpan
+{
+	font-size: 1.6rem;
+}
+
+#miningDiv > div > table tr td
+{
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+#miningDiv > div > table tr th
+{
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+#southXchangeLogo
+{
+	height: 5rem;
+}
+
+}

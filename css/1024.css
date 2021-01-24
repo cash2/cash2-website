@@ -1,0 +1,18 @@
+@media screen and (max-width:1024px)
+{
+
+#contactUsDiv
+{
+	text-align: center;
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+
+#contactUsDiv > div:last-child
+{
+	display: none;
+}
+
+}

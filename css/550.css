@@ -1,0 +1,36 @@
+@media screen and (max-width:550px)
+{
+
+h1
+{
+	font-size: 4rem;
+}
+
+h2
+{
+	font-size: 2.5rem;
+}
+
+#coinMarketCapLogo
+{
+	height : 5rem;
+}
+
+#contactUsDiv > div > h1
+{
+	margin-bottom: 5rem;
+}
+
+#menuSpan
+{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+
+#priceHeaderSpan
+{
+	padding-right: 1rem;
+}
+
+}

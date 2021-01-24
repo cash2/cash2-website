@@ -1,0 +1,81 @@
+@media screen and (max-width:800px)
+{
+
+h1
+{
+	font-size: 5rem;
+}
+
+h2
+{
+	font-size: 3rem;
+}
+
+#contactUsDiv, 
+#disclaimerDiv, 
+#downloadsDiv,
+#exchangesDiv,
+#faqDiv,
+#generalInformationDiv1,
+#generalInformationDiv2,
+#generalInformationDiv3,
+#miningDiv,
+#paperWalletDiv,
+#priceDiv,
+#socialMediaDiv,
+#technicalDetailsDiv
+{
+	padding-top: 7rem;
+	padding-bottom: 7rem;
+	padding-left: 5rem;
+	padding-right: 5rem;
+}
+
+#downloadsDiv > div:not(:last-child) {
+	margin-bottom: 5rem;
+}
+
+#downloadsDiv > h1 {
+	margin-bottom: 4rem;
+}
+
+#downloadsDiv > p {
+	margin-bottom: 4rem;
+}
+
+#generalInformationDiv3 > div > table {
+	margin-top: 4rem;
+	text-align: center;
+}
+
+#generalInformationDiv3 > div > table tr th {
+	font-size: 2rem;
+	padding-top: 0rem;
+	padding-bottom: 0rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#generalInformationDiv3 > div > table tr td {
+	font-size: 2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	text-align: center;
+}
+
+#miningDiv > h1 {
+	margin-bottom: 4rem;
+}
+
+#miningDiv > p {
+	margin-bottom: 4rem;
+}
+
+#miningDiv > div > table {
+    margin-top: 0rem;
+    margin-bottom: 10rem;
+}
+
+}

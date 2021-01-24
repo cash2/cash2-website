@@ -3,1016 +3,410 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <title>Cash2</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
-  <style>
-    a
-    {
-      color: blue !important;
-      text-decoration: none;
-    }
-
-    a:hover
-    {
-      text-decoration: underline;
-    }
-
-    body
-    {
-      text-align : center;
-      background : #ececec;
-      font-family : sans-serif;
-      font-size: 16px;
-      margin: 0px;
-    }
-
-    h1
-    {
-      font-size: 3em;
-    }
-
-    h2
-    {
-      font-size: 33px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-right: 10px;
-      margin-left: 10px;
-    }
-
-    h3
-    {
-      font-size: 27px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-right: 0px;
-      margin-left: 0px;
-      word-break: break-word;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    p
-    {
-      font-size: 20px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-right: 0px;
-      padding-left: 0px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-right: 0px;
-      margin-left: 0px;
-    }
-
-    pre
-    {
-      overflow: auto;
-    }
-
-    span
-    {
-      font-size: 20px;
-      word-break: break-word;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    table
-    {
-      border-collapse: collapse;
-      margin: 0 auto;
-    }
-
-    table td
-    {
-      font-size: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 5px;
-      padding-right: 5px;
-      border: none;
-    }
-
-    table th
-    {
-      font-size: 20px;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      padding-left: 5px;
-      padding-right: 5px;
-      border: none;
-    }
-
-    ul, li
-    {
-      font-size: 20px;
-      margin: 0px;
-      padding-top: 3px;
-      padding-bottom: 3px;
-      word-break: break-word;
-      word-wrap: break-word;
-      overflow-wrap: break-word;
-    }
-
-    #cash2
-    {
-      margin-top: 0px;
-      margin-bottom: 0px;
-      margin-right: 0px;
-      margin-left: 0px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      padding-right: 0px;
-      padding-left: 0px;
-    }
-
-    #cashVersion2
-    {
-      display: inline-block;
-      margin-top: 10px;
-    }
-
-    #coinGeckoLogo
-    {
-      height : 60px;
-    }
-
-    #coinMarketCapLogo
-    {
-      height : 60px;
-    }
-
-    #contactUsDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #disclaimerDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #downloadsDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #exchangesDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #faqDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #generalInformationDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #headerDiv
-    {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    #logo1
-    {
-      height: 35px;
-      line-height: 35px;
-      display: inline-block;
-      font-size: 18px;
-    }
-
-    #logo2
-    {
-      height: 18px;
-    }
-
-    #miningInformationDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #paperWalletDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #priceDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #socialMediaDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    #technicalDetailsDiv
-    {
-      background-color: #f8f8f8;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-
-    .bold
-    {
-      font-weight: bold;
-    }
-
-    .font14
-    {
-      font-size: 14px;
-    }
-
-    .font18
-    {
-      font-size: 18px;
-    }
-
-    .font20
-    {
-      font-size: 20px;
-    }
-
-    .font22
-    {
-      font-size: 22px;
-    }
-
-    .font24
-    {
-      font-size: 24px;
-    }
-
-    .font30
-    {
-      font-size: 30px;
-    }
-
-    .font50
-    {
-      font-size: 50px;
-    }
-         
-    .green
-    {
-      color:#00ff00;
-    }
-
-    .monospace
-    {
-      font-family: monospace;
-    }
-
-    .no-bold
-    {
-      font-weight: normal;
-    }
-
-    .red
-    {
-      color: #ff0000;
-    }
-
-    .serif
-    {
-      font-family: serif;
-    }
-
-    .bottom
-    {
-      vertical-align: bottom;
-    }
-
-    .underline
-    {
-      text-decoration: underline;
-    }
-
-    .white
-    {
-      color: #ffffff;
-    }
-
-    @media screen and (min-width:900px)
-    {
-      #cash2VsCashTable, td
-      {
-        padding-left: 15px !important;
-        padding-right: 15px !important;
-      }
-
-      #contactUsDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      #disclaimerDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-
-      #downloadsDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-
-      #exchangesDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      #faqDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-
-      #generalInformationDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      #miningInformationDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-
-      #miningPoolsTable, td
-      {
-        padding-left: 40px !important;
-        padding-right: 40px !important;
-      }
-
-      #miningPoolsTable, th
-      {
-        padding-left: 40px !important;
-        padding-right: 40px !important;
-      }
-
-      #navigationDiv
-      {
-        display: -webkit-box;
-        display: -moz-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: 90%;
-        margin: 0 auto;
-      }
-
-      #navigationDiv > p
-      {
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-
-      #paperWalletDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      #priceDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      #socialMediaDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-
-      #technicalDetailsDiv
-      {
-        border-radius: 25px;
-        margin-left: 50px;
-        margin-right: 50px;
-      }
-    }
-  </style>
+  <title>Official Site | Cash2</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/full.css">
+	<link rel="stylesheet" href="css/1500.css">
+	<link rel="stylesheet" href="css/1100.css">
+	<link rel="stylesheet" href="css/1024.css">
+	<link rel="stylesheet" href="css/800.css">
+	<link rel="stylesheet" href="css/550.css">
+	<link rel="stylesheet" href="css/400.css">
 </head>
 <body>
-  <div id="headerDiv">
-    <img id="logo1" src="cash2Logo100x100.svg">
-    <h1 id="cash2" class="serif">Cash2</h1>
-    <p id="cashVersion2">Cash Version 2</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div id="navigationDiv">
-      <p><a href="https://blocks.cash2.org" target="_blank" id="blockExplorerLink">Block Explorer</a></p>
-      <br/>
-      <p><a href="#contact">Contact Us</a></p>
-      <br/>
-      <p><a href="#disclaimer">Disclaimer</a></p>
-      <br/>
-      <p><a href="#downloads">Downloads</a></p>
-      <br/>
-      <p><a href="#exchanges">Exchanges</a></p>
-      <br/>
-      <p><a href="#faq">FAQ</a></p>
-      <br/>
-      <p><a href="#generalInformation">General Information</a></p>
-      <br/>
-      <p><a href="#miningInformation">Mining Information</a></p>
-      <br/>
-      <p><a href="#paperWallet">Paper Wallet</a></p>
-      <br/>
-      <p><a href="#price">Price</a></p>
-      <br/>
-      <p><a href="#socialMedia">Social Media</a></p>
-      <br/>
-      <p><a href="https://github.com/cash2/cash2" target="_blank">Source Code</a></p>
-      <br/>
-      <p><a href="#technicalDetails">Technical Details</a></p>
-      <br/>
-      <p><a href="https://cash2.org/Cash2+Whitepaper+English+02102019.pdf">Whitepaper</a></p>
-      <br/>
-    </div>
-  </div>
-  <br/>
-  <br/>
-  <div id="generalInformationDiv">
-    <div id="generalInformation"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="generalInformationH2">General Information</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p>Cash2 is a cryptocurrency that improves upon paper cash.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <table id="cash2VsCashTable">
-      <tr>
-        <td></td>
-        <td class="bottom">cash</td>
-        <td class="bold serif font24"><img id="logo2" src="cash2Logo100x100.svg"> Cash2</td>
-      </tr>
-      <tr>
-        <td id="hardToCounterfeit">Hard to Counterfeit</td>
-        <td class="green bold font24">&#x2713</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="divisible">Divisible</td>
-        <td class="green bold font24">&#x2713</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="fungible">Fungible</td>
-        <td class="green bold font24">&#x2713</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="easyToTransact">Easy to Transact</td>
-        <td class="green bold font24">&#x2713</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="usableOnline">Usable Online</td>
-        <td class="red bold font24">&#10007</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="decentralized">Decentralized</td>
-        <td class="red bold font24">&#10007</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="limitedSupply">Limited Supply</td>
-        <td class="red bold font24">&#10007</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-      <tr>
-        <td id="borderless">Borderless</td>
-        <td class="red bold font24">&#10007</td>
-        <td class="green bold font24">&#x2713</td>
-      </tr>
-    </table>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="miningInformationDiv">
-    <div id="miningInformation"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="miningInformationH2" class="col-centered">Mining Information</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p>Miner's acutal hashrate may be less than maximum due to Cash2's fast block times.</p>
-    <br/>
-    <p>Every effort is made to send payments out correctly, but no guarantees are made due to occasional pool errors.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <table id="miningPoolsTable">
-      <tr>
-        <th>Mining Pool</th>
-        <th>Fee</th>
-        <th>Location</th>
-      </tr>
-      <tr>
-        <td><a href="https://cash2pool.us" target="_blank">cash2pool.us</a></td>
-        <td>1%</td>
-        <td>USA</td>
-      </tr>
-      <tr>
-        <td><a href="https://blakepool.com" target="_blank">blakepool.com</a></td>
-        <td>1%</td>
-        <td>Europe</td>
-      </tr>
-      <tr>
-        <td><a href="https://soloblox.com" target="_blank">soloblox.com</a></td>
-        <td>0.5%</td>
-        <td>USA</td>
-      </tr>
-    </table>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Recommended Hardware</p>
-    <br/>
-    <p>Innosilicon S11</p>
-    <br/>
-    <p>StrongU STU-U2</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Mining Calculators</p>
-    <br/>
-    <p><a href="https://www.blakemining.com/" target="_blank">blakemining.com</a></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div>
-    <div id="contactUsDiv">
-    <div id="contact"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="contactUsH2" class="col-centered">Contact Us</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p>Paul Aphivantrakul</p>
-    <br/>
-    <p>cash2@protonmail.com</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="exchangesDiv">
-    <div id="exchanges"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="exchangesH2" class="col-centered">Exchanges</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p><a href="https://www.southxchange.com/Market/Book/CASH2/BTC" target="_blank">southXchange</a></p>
-    <br/>
-    <br/>
-    <p><a href="https://bisq.network" target="_blank"><img src="bisqLogo.svg"/></a></p>
-    <br/>
-    <br/>
-    <p><a href="https://c-patex.com/markets/cash2btc" target="_blank"><img src="cPatexLogo.png"/></a></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="downloadsDiv">
-    <div id="downloads"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="downloadsH2" class="col-centered">Downloads</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <span class="bold">By downloading and/or using any Cash2 software, you agree to the following :</span>
-    <br/>
-    <span class="font14">CASH2 SOFTWARE IS DISTRIBUTED UNDER THE MIT/X11 LICENSE</span>
-    <br/>
-    <span class="font14">THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</span>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="red">Please write down the spend private key and view private key of every wallet you create.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Cash2 Wallet</p>
-    <br/>
-    <p><a href="https://cash2.org/cash2-Windows-x64-GUI-version5.1.1.zip" target="_blank">Windows x64 Version 5.1.1</a></p>
-    <br/>
-    <p><a href="https://cash2.org/cash2-macOS-x64-GUI-version5.1.1.zip" target="_blank">macOS x64 Version 5.1.1</a></p>
-    <br/>
-    <p><a href="https://cash2.org/cash2-Ubuntu-x64-GUI-version5.1.1.tar.gz" target="_blank">Ubuntu x64 Version 5.1.1</a></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Cash2 Command Line Wallet</p>
-    <br/>
-    <p><a href="https://cash2.org/cash2-Windows-x64-version5.1.zip" target="_blank">Windows x64 CLI Version 5.1</a></p>
-    <br/>
-    <p><a href="https://cash2.org/cash2-macOS-x64-version5.1.zip" target="_blank">macOS x64 CLI Version 5.1</a></p>
-    <br/>
-    <p><a href="https://cash2.org/cash2-Ubuntu-x64-version5.1.tar.gz" target="_blank">Ubuntu x64 CLI Version 5.1</a></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Blockchain Files</p>
-    <br/>
-    <p>Please visit our <a href="https://discord.gg/wvgvUBT" target="_blank">Discord</a> channel to request a copy of the blockchain file.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="technicalDetailsDiv">
-    <div id="technicalDetails"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2>Technical Details</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div class="col-centered">
-      <table id="technicalDetailsTable" class="col-lg-5 col-md-5">
-        <tr>
-          <td id="maxSupply">Max Supply</td>
-          <td>15,000,000 CASH2</td>
-        </tr>
-        <tr>
-          <td id="blockTime">Block Time</td>
-          <td>9 <span id="seconds2">seconds</span></td>
-        </tr>
-        <tr>
-          <td id="transactionFee">Transaction Fee</td>
-          <td>0.01 CASH2</td>
-        </tr>
-        <tr>
-          <td id="codeFamily">Code Family</td>
-          <td><a href="https://cryptonote.org/">CryptoNote</a></td>
-        </tr>
-        <tr>
-          <td id="hashingAlgorithm">Hashing Algorithm</td>
-          <td><a href="https://blake2.net/">BLAKE2b</a></td>
-        </tr>  
-        <tr>
-          <td id="blockReward">Block Reward</td>
-          <td>0.894069671 <span id="orLess">or less</span></td>
-        </tr>
-        <tr>
-          <td id="blockReward">Smallet Amount</td>
-          <td>0.000000001 CASH2</span></td>
-        </tr>
-      </table>
-    </div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="paperWalletDiv">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div id="paperWallet"></div>
-    <input type="hidden" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
-    <h2 id="paperWalletH2" class="col-centered">Paper Wallet</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Address</p>
-    <pre id="address_widget" class="font20"> </pre>
-    <br/>
-    <br/>
-    <p class="bold">Spend private key</p>
-    <p><pre id="spend_key_widget" class="font20"> </pre></p>
-    <br/>
-    <br/>
-    <p class="bold">View private key</p>
-    <p><pre id="view_key_widget" class="font20"> </pre></p>
-    <br/>
-    <br/>
-    <br/>
-    <p class="red">Please write down and keep both private keys safe.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="socialMediaDiv">
-    <div id="socialMedia"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="socialMediaH2" class="col-centered">Social Media</h2>
-    <br/>
-    <br/>
-    <br/>
-    <p><a href="https://discord.gg/wvgvUBT" target="_blank">Discord</a></p>
-    <br/>
-    <br/>
-    <p><a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube</a></p>
-    <br/>
-    <br/>
-    <p><a href="https://www.reddit.com/r/Cash2" target="_blank">Reddit</a></p>
-    <br/>
-    <br/>
-    <p><a href="https://twitter.com/cash2org" target="_blank">Twitter</a></p>
-    <br/>
-    <br/>
-    <p><a href="https://bitcointalk.org/index.php?topic=5072952.msg48090752#msg48090752" target="_blank">Bitcointalk</a></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="priceDiv">
-    <div id="price"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 class="col-centered">Price</h2>
-    <br/>
-    <br/>
-    <br/>
-    <p><a href="https://www.coingecko.com/en/coins/cash2" target="_blank"><img id="coinGeckoLogo" src="coinGeckoLogo.png"></a></p>
-    <br/>
-    <p><a href="https://blockspot.io/coin/cash2/" target="_blank"><img src="blockspotLogo250x90.png"/></a></p>
-    <br/>
-    <p><a href="https://coinmarketcap.com/currencies/cash2/" target="_blank"><img id="coinMarketCapLogo" src="coinMarketCapLogo.png">CoinMarketCap</a></p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="faqDiv">
-    <div id="faq"></div>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h2 id="faqH2" class="col-centered">FAQ</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">What is Cash2?</p>
-    <p>Cash2 is a new cryptocurrency with all the useful properties of cash but with added beneficial features.<br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">What are the goals of Cash2?</p>
-    <br/>
-    <p>Fast</p>
-    <br/>
-    <p>Fungible</p>
-    <br/>
-    <p>Low Fees</p>
-    <br/>
-    <p>Reliable</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Is Cash2 a Scam?</p>
-    <p>No. Cash2 does not have a premine, and everyone has an equal opportunity to mine, buy, and sell Cash2.</p>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">How Can I Mine Cash2?</p>
-    <p>The Innosilicon S11 and StrongU STU-U2 are recommended for mining Cash2.<br/>Please check out our <a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube</a> channel and <a href="https://discord.gg/wvgvUBT">Discord</a> for help with mining.</p>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">How Can I Buy / Sell Cash2?</p>
-    <p><a href="#exchanges">Exchanges</a></p>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Is Cash2 a Privacy Coin?</p>
-    <p>No. Cash2 provides only a basic level of privacy for improved fungibility.<br/>The focus of Cash2 is towards becoming a mainstream digital money and not towards absolute privacy.</p>
-    <br/>
-    <br/>
-    <br/>
-    <p class="bold">Why does Cash2 use BLAKE2b instead of Cryptonight?</p>
-    <p>Fast block times requires a fast hashing algorithm, and BLAKE2b is one of the fastest algorithms available.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <div id="disclaimerDiv">
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <div id="disclaimer"></div>
-    <h2>Disclaimer</h2>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <h3>Introduction</h3>
-    <p>This website is operated by The Cash2 Developers, a loose collective of individuals behind Cash2. By visiting and using this website you will be accepting these Terms of Use ("TOU"). Please read them carefully and if you disagree with the TOU in any way, then do not use this website. The Cash2 Developers reserves the right to post changes to the TOU on this website at any time, and by your continuing to use the website thereafter, you agree to be bound by the new version of the TOU. If any TOU changes are not acceptable, you must stop your use of this website. In these TOU, "The Cash2 Developers" and "we" refers to The Cash2 Developers, and "User" or "you" refers to each visitor to this website. "Cash2" refers to the digital currency that can be used by the software available on this website.</p>
-    <br/>
-    <br/>
-    <h3>Sites and Services</h3>
-    <p>We do not guarantee that access to or use of this website or any services will be uninterrupted or error free, and The Cash2 Developers shall not be liable for any feature not being accessible or for any unavailability of its website and services. The website and its features may be expanded, limited or modified at any time by The Cash2 Developers to meet the needs of its Users, or for technical or other reasons, without advance notice or reason. We may also in our sole discretion, and at any time, discontinue providing, temporarily or permanently, any or all of the website, without notice. To access some of the content or features of the website or its services, Users may need to enhance or update the hardware or software in their computer systems. The Cash2 Developers assumes no responsibility for any failure to access the website or any services, partially or fully, whether due to the User's system, the Internet network or any other cause.</p>
-    <br/>
-    <br/>
-    <h3>Minors</h3>
-    <p>We do not provide information or services to minors, and if you are under 18 you may only use this site with the active involvement of a parent, guardian or other supervising adult.</p>
-    <br/>
-    <br/>
-    <h3>No Investment Advice</h3>
-    <p>This website does not provide individual or customized legal, tax, financial, or investment services. Since each individual's situation is unique, a qualified professional should be consulted before making financial decisions. Since Cash2 is meant to be used as a medium of exchange, nothing on this website constitutes investment advice or a solicitation to buy, hold, invest in, own, or use Cash2.</p>
-    <br/>
-    <br/>
-    <h3>Content Limitations</h3>
-    <p>We make no guarantees as to the accuracy, thoroughness or quality of the information on this website, which is provided only on an "AS-IS" and "AS AVAILABLE" basis at User's sole risk. This information may be provided by third parties and The Cash2 Developers shall not be responsible or liable for any errors, omissions or inaccuracies in the website content. The information provided at this site are neither comprehensive nor appropriate for every individual. Some of the information is relevant only in certain parts of the world, and may not be relevant to or compliant with the laws, regulations or other legal requirements of other countries. It is your responsibility to determine whether, how and to what extent your intended use of the information and services will be technically and legally possible in the areas of the world where you intend to use them. You are advised to verify any information before using it for any personal, financial or business purpose. In addition, the opinions and views expressed in any forum post on this website are solely those of the author(s) of the article and do not reflect the opinions of The Cash2 Developers. The website content and services may be modified at any time by us, without advance notice or reason, and The Cash2 Developers shall have no obligation to notify you of any corrections or changes to any website content.</p>
-    <br/>
-    <br/>
-    <p>Information provided in this Disclaimer section was borrowed from Copyright (c) 2014-2020 The Monero Developers and is distributed under the CC BY-SA 4.0 license.</p>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-  </div>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <script src="cash2Address.js">// Javascript for generating address</script>
+	<header>
+		<section>
+			<div id="headerDiv" class="row">
+				<div class="col">
+					<div id="menuContainerDiv">
+						<span id="menuSpan" class="bold">Menu</span>
+						<div id="menuDiv">
+							<nav>
+								<ul>
+									<li class="liLink"><a href="https://blocks.cash2.org" target="_blank" id="blockExplorerLink">Block Explorer</a></li>
+									<li class="liLink"><a href="#contactUs">Contact Us</a></li>
+									<li class="liLink"><a href="#disclaimer">Disclaimer</a></li>
+									<li class="liLink"><a href="#downloads">Downloads</a></li>
+									<li class="liLink"><a href="#exchanges">Exchanges</a></li>
+									<li class="liLink"><a href="#faq">FAQ</a></li>
+									<li class="liLink"><a href="#generalInformation">General Information</a></li>
+									<li class="liLink"><a href="#mining">Mining</a></li>
+									<li class="liLink"><a href="#paperWallet">Paper Wallet</a></li>
+									<li class="liLink"><a href="#price">Price</a></li>
+									<li class="liLink"><a href="#socialMedia">Social Media</a></li>
+									<li class="liLink"><a href="https://github.com/cash2/cash2" target="_blank">Source Code</a></li>
+									<li class="liLink"><a href="#technicalDetails">Technical Details</a></li>
+									<li class="liLink"><a href="https://cash2.org/Cash2+Whitepaper+English+02102019.pdf">Whitepaper</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div id="logoDiv" class="col">
+					<img id="cash2Logo1" src="images/cash2Logo100x100.svg">
+				</div>
+				<div class="col">
+					<span id="priceHeaderSpan"></span>
+				</div>
+			</div>
+		</section>
+	</header>
+	<section>
+		<div id="introDiv">
+			<h1>Cash2</h1>
+			<p>Cash Version 2</p>
+		</div>
+	</section>
+	<section>
+		<span id="generalInformation"></span>
+		<div id="generalInformationContainerDiv">
+			<div id="generalInformationDiv1">
+				<h1>Cash2 is an <a href="https://github.com/cash2/cash2" target="_blank">open-source</a> cryptocurrency launched on December 5, 2018</h1>
+			</div>
+			<div id="generalInformationDiv2">
+				<div class="center">
+					<h1>Cash2 is the next evolution in money</h1>
+				</div>
+				<div class="tableContainer">
+					<table>
+						<tr>
+							<th></th>
+							<th class="bold center">Cash2</th>
+							<th class="bottom center">cash</th>
+						</tr>
+						<tr>
+							<td>Hard to Counterfeit</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="green bold center font3rem">&#x2713</td>
+						</tr>
+						<tr>
+							<td>Divisible</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="green bold center font3rem">&#x2713</td>
+						</tr>
+						<tr>
+							<td>Fungible</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="green bold center font3rem">&#x2713</td>
+						</tr>
+						<tr>
+							<td>Easy to Transact</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="green bold center font3rem">&#x2713</td>
+						</tr>
+						<tr>
+							<td>Online</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="red bold center font3rem">&#10007</td>
+						</tr>
+						<tr>
+							<td>Decentralized</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="red bold center font3rem">&#10007</td>
+						</tr>
+						<tr>
+							<td>Limited Supply</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="red bold center font3rem">&#10007</td>
+						</tr>
+						<tr>
+							<td>Borderless</td>
+							<td class="green bold center font3rem">&#x2713</td>
+							<td class="red bold center font3rem">&#10007</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div id="generalInformationDiv3">
+				<h1>Cash2 outperforms Bitcoin</h1>
+				<div class="tableContainer">
+					<table>
+						<tr>
+							<th></th>
+							<th class="bold">Cash2</th>
+							<th>Bitcoin</th>
+						</tr>
+						<tr>
+							<td>Transaction time</td>
+							<td class="green bold center font3rem">9 seconds</td>
+							<td class="center">10 minutes</td>
+						</tr>
+						<tr>
+							<td>Fees</td>
+							<td class="green bold center font3rem">$0.0001</td>
+							<td class="center">$50</td>
+						</tr>
+						<tr>
+							<td>Privacy</td>
+							<td class="green bold center font3rem">Yes</td>
+							<td class="center">None</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="downloads"></span>
+		<div id="downloadsContainerDiv">
+			<div id="downloadsDiv">
+				<h1>Downloads</h1>
+				<p class="red">Please write down the spend private key and view private key of every wallet you create</p>
+				<div>
+					<p class="bold">Cash2 Wallet</p>
+					<p><a href="https://cash2.org/cash2-Windows-x64-GUI-version5.1.1.zip" target="_blank">Windows x64 Version 5.1.1</a></p>
+					<p><a href="https://cash2.org/cash2-macOS-x64-GUI-version5.1.1.zip" target="_blank">macOS x64 Version 5.1.1</a></p>
+					<p><a href="https://cash2.org/cash2-Ubuntu-x64-GUI-version5.1.1.tar.gz" target="_blank">Ubuntu x64 Version 5.1.1</a></p>
+				</div>
+				<div>
+					<p class="bold">Cash2 Command Line Wallet</p>
+					<p><a href="https://cash2.org/cash2-Windows-x64-version5.1.zip" target="_blank">Windows x64 CLI Version 5.1</a></p>
+					<p><a href="https://cash2.org/cash2-macOS-x64-version5.1.zip" target="_blank">macOS x64 CLI Version 5.1</a></p>
+					<p><a href="https://cash2.org/cash2-Ubuntu-x64-version5.1.tar.gz" target="_blank">Ubuntu x64 CLI Version 5.1</a></p>
+				</div>
+				<div>
+					<p class="bold">Blockchain Files</p>
+					<p><a href="https://blockchain.cash2.org" target="_blank">https://blockchain.cash2.org</a></p>
+				</div>
+				<p>* Please visit our <a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube</a> channel for help with using the Cash2 software</p>
+				<div id="downloadDisclaimer">
+					<p class="bold">By downloading and/or using any Cash2 software, you agree to the following :</p>
+					<p>
+						The Cash2 software is distributed under the MIT/X11 license : The software is provided "as is", without warranty of any kind,
+						express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and
+						noninfringement. In no event shall the authors or	copyright holders be liable for any claim, damages or other liability,
+						whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or
+						other dealings in the software.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="mining"></span>
+		<div id="miningContainerDiv">
+			<div id="miningDiv">
+				<h1>Mining</h1>
+				<p>Miner's acutal hashrate may be less than the maximum due to Cash2's fast block times. Every effort is made to send payments out correctly, but pool errors can occasionally occur.</p>
+				<div class="tableContainer">
+					<table>
+						<tr>
+							<th>Mining Pool</th>
+							<th>Fee</th>
+							<th>Location</th>
+						</tr>
+						<tr>
+							<td><a href="https://cash2pool.us" target="_blank">cash2pool.us</a></td>
+							<td>1%</td>
+							<td>USA</td>
+						</tr>
+					</table>
+				</div>
+				<div id="recommendedHardwareDiv">
+					<h2>Recommended Hardware</h2>
+					<ul>
+						<li>Innosilicon S11</li>
+						<li>StrongU STU-U2</li>
+					</ul>
+				</div>
+				<div id="miningCalculatorsDiv">
+					<h2>Mining Calculators</h2>
+					<ul>
+						<li><a href="https://www.blakemining.com/" target="_blank">blakemining.com</a></li>
+					</ul>
+				</div>
+				<p>* Please visit our <a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube</a> channel for help with mining Cash2</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="contactUs"></span>
+		<div id="contactUsContainerDiv">
+			<div id="contactUsDiv" class="row">
+				<div class="col">
+					<h1>Contact Us</h1>
+					<h3>Paul Aphivantrakul</h3>
+					<p>cash2@protonmail.com</p>
+					<p><a href="https://discord.gg/wvgvUBT" target="_blank">Discord</a> (aphivantrakul)</p>
+				</div>
+				<div class="col">
+					<img src="images/cash2Logo100x100.svg">
+				</div>
+			</div>
+		</div>
+	</section>
+  <section>
+		<span id="exchanges"></span>
+		<div id="exchangesContainerDiv">
+			<div id="exchangesDiv">
+				<h1>Exchanges</h1>
+				<p><a href="https://www.southxchange.com/Market/Book/CASH2/BTC" target="_blank"><img id="southXchangeLogo" src="images/southXchangeLogo.png"></a></p>
+				<p><a href="https://c-patex.com/markets/cash2btc" target="_blank"><img id="cPatexLogo" src="images/cPatexLogo.jpg"/></a></p>
+				<p><a href="https://bisq.network" target="_blank"><img src="images/bisqLogo.svg"/></a></p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="socialMedia"></span>
+		<div id="socialMediaContainerDiv">
+			<div id="socialMediaDiv">
+				<h1>Social Media</h1>
+				<p><a href="https://discord.gg/wvgvUBT" target="_blank"><img id="discordLogo" src="images/discordLogo.svg"></a></p>
+				<p><a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank"><img id="youTubeLogo" src="images/youTubeLogo.svg"></a></p>
+				<p><a href="https://www.reddit.com/r/Cash2" target="_blank"><img id="redditLogo" src="images/redditLogo.svg"></a></p>
+				<p><a href="https://twitter.com/cash2org" target="_blank"><img id="twitterLogo" src="images/twitterLogo.svg"></a></p>
+				<p><a href="https://bitcointalk.org/index.php?topic=5072952.msg48090752#msg48090752" target="_blank">Bitcointalk</a></p>
+			</div>
+		</div>
+	</section>
+  <section>
+		<span id="technicalDetails"></span>
+		<div id="technicalDetailsContainerDiv">
+			<div id="technicalDetailsDiv">
+				<h1>Technical Details</h1>
+				<table id="technicalDetailsTable">
+					<tr>
+						<td>Max Supply</td>
+						<td>15,000,000 CASH2</td>
+					</tr>
+					<tr>
+						<td>Block Time</td>
+						<td>9 seconds</td>
+					</tr>
+					<tr>
+						<td>Transaction Fee</td>
+						<td>0.01 CASH2</td>
+					</tr>
+					<tr>
+						<td>Code Family</td>
+						<td><a href="https://cryptonote.org/">CryptoNote</a></td>
+					</tr>
+					<tr>
+						<td>Hashing Algorithm</td>
+						<td><a href="https://blake2.net/">BLAKE2b</a></td>
+					</tr>  
+					<tr>
+						<td>Block Reward</td>
+						<td>0.894069671 or less</td>
+					</tr>
+					<tr>
+						<td>Smallet Unit</td>
+						<td>0.000000001 CASH2</td>
+					</tr>
+					<tr>
+						<td>Programming Language</td>
+						<td>C++</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="paperWallet"></span>
+		<div id="paperWalletContainerDiv">
+			<div id="paperWalletDiv">
+				<input type="hidden" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
+				<h1>Paper Wallet</h1>
+				<div>
+					<p>Address</p>
+					<pre id="address_widget"></pre>
+				</div>
+				<div>
+					<p>Spend private key</p>
+					<pre id="spend_key_widget"></pre>
+				</div>
+				<div>
+					<p>View private key</p>
+					<pre id="view_key_widget"></pre>
+				</div>
+				<p>Please write down and keep safe</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="price"></span>
+		<div id="priceContainerDiv">
+			<div id="priceDiv">
+				<h1>Price</h1>
+				<p><a href="https://www.coingecko.com/en/coins/cash2" target="_blank"><img id="coinGeckoLogo" src="images/coinGeckoLogo.svg"></a></p>
+				<p><a href="https://blockspot.io/coin/cash2/" target="_blank"><img id="blockSpotLogo" src="images/blockspotLogo250x90.png"/></a></p>
+				<p><a href="https://coinmarketcap.com/currencies/cash2/" target="_blank"><img id="coinMarketCapLogo" src="images/coinMarketCapLogo.svg"></a></p>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="faq"></span>
+		<div id="faqContainerDiv">
+			<div id="faqDiv">
+				<h1>FAQ</h1>
+				<div>
+					<p>What is Cash2?</p>
+					<p>Cash2 cryptocurrency has all the useful properties of cash but is also digital, decentralized, non-inflationary, and borderless. Compared to Bitcoin, Cash2 is fast, fungible, and has low fees.</p>
+				</div>
+				<div>
+					<p>What are the goals of Cash2?</p>
+					<p>Fast, low fees, fungible</p>
+				</div>
+				<div>
+					<p>Is Cash2 a Scam?</p>
+					<p>No. Cash2 does not have a premine, and everyone has an equal opportunity to mine, buy, and sell Cash2.</p>
+				</div>
+				<div>
+					<p>How Can I Mine Cash2?</p>
+					<p>The Innosilicon S11 and StrongU STU-U2 are recommended for mining Cash2. Please check out our <a href="https://www.youtube.com/channel/UCJ79rbHYc2tFJ-pL-v9guaw" target="_blank">YouTube</a> channel and <a href="https://discord.gg/wvgvUBT">Discord</a> for help with mining.</p>
+				</div>
+				<div>
+					<p>How Can I Buy / Sell Cash2?</p>
+					<p><a href="#exchanges">Exchanges</a></p>
+				</div>
+				<div>
+					<p>Is Cash2 a Privacy Coin?</p>
+					<p>No. Cash2 provides only a basic level of privacy for improved fungibility. Cash2 should not be used for illegal transactions.</p>
+				</div>		
+				<div>		
+					<p>Why does Cash2 use BLAKE2b instead of Cryptonight?</p>
+					<p>Fast block times requires a fast hashing algorithm, and BLAKE2b is one of the fastest algorithms available.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section>
+		<span id="disclaimer"></span>
+		<div id="disclaimerContainerDiv">
+			<div id="disclaimerDiv">
+				<h1>Disclaimer</h1>
+				<div>
+					<p class="bold">Introduction</p>
+					<p>This website is operated by The Cash2 Developers, a loose collective of individuals behind Cash2. By visiting and using this website you will be accepting these Terms of Use ("TOU"). Please read them carefully and if you disagree with the TOU in any way, then do not use this website. The Cash2 Developers reserves the right to post changes to the TOU on this website at any time, and by your continuing to use the website thereafter, you agree to be bound by the new version of the TOU. If any TOU changes are not acceptable, you must stop your use of this website. In these TOU, "The Cash2 Developers" and "we" refers to The Cash2 Developers, and "User" or "you" refers to each visitor to this website. "Cash2" refers to the digital currency that can be used by the software available on this website.</p>
+				</div>
+				<div>
+					<p class="bold">Sites and Services</p>
+					<p>We do not guarantee that access to or use of this website or any services will be uninterrupted or error free, and The Cash2 Developers shall not be liable for any feature not being accessible or for any unavailability of its website and services. The website and its features may be expanded, limited or modified at any time by The Cash2 Developers to meet the needs of its Users, or for technical or other reasons, without advance notice or reason. We may also in our sole discretion, and at any time, discontinue providing, temporarily or permanently, any or all of the website, without notice. To access some of the content or features of the website or its services, Users may need to enhance or update the hardware or software in their computer systems. The Cash2 Developers assumes no responsibility for any failure to access the website or any services, partially or fully, whether due to the User's system, the Internet network or any other cause.</p>
+				</div>
+				<div>
+					<p class="bold">Minors</p>
+					<p>We do not provide information or services to minors, and if you are under 18 you may only use this site with the active involvement of a parent, guardian or other supervising adult.</p>
+				</div>
+				<div>
+					<p class="bold">No Investment Advice</p>
+					<p>This website does not provide individual or customized legal, tax, financial, or investment services. Since each individual's situation is unique, a qualified professional should be consulted before making financial decisions. Since Cash2 is meant to be used as a medium of exchange, nothing on this website constitutes investment advice or a solicitation to buy, hold, invest in, own, or use Cash2.</p>
+				</div>
+				<div>
+					<p class="bold">Content Limitations</p>
+					<p>We make no guarantees as to the accuracy, thoroughness or quality of the information on this website, which is provided only on an "AS-IS" and "AS AVAILABLE" basis at User's sole risk. This information may be provided by third parties and The Cash2 Developers shall not be responsible or liable for any errors, omissions or inaccuracies in the website content. The information provided at this site are neither comprehensive nor appropriate for every individual. Some of the information is relevant only in certain parts of the world, and may not be relevant to or compliant with the laws, regulations or other legal requirements of other countries. It is your responsibility to determine whether, how and to what extent your intended use of the information and services will be technically and legally possible in the areas of the world where you intend to use them. You are advised to verify any information before using it for any personal, financial or business purpose. In addition, the opinions and views expressed in any forum post on this website are solely those of the author(s) of the article and do not reflect the opinions of The Cash2 Developers. The website content and services may be modified at any time by us, without advance notice or reason, and The Cash2 Developers shall have no obligation to notify you of any corrections or changes to any website content.</p>
+				</div>
+				<p>Information provided in this Disclaimer section was borrowed from Copyright (c) 2014-2021 The Monero Developers and is distributed under the CC BY-SA 4.0 license.</p>
+				<p><a href='https://www.freepik.com/vectors/background'>Background vector created by freepik - www.freepik.com</a></p>
+				<p>Copyright (c) 2018-2021 The Cash2 developers</p>
+			</div>
+		</div>
+	</section>
+	<section>
+		
+	</section>
+  <script src="js/cash2PaperWallet.js">// JavaScript for generating paper wallet</script>
+  <script src="js/cash2.js"></script>
 </body>
 </html>

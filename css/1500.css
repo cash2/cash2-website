@@ -1,0 +1,23 @@
+@media screen and (max-width:1500px)
+{
+
+#generalInformationDiv2
+{
+	padding-top: 10rem;
+	padding-bottom: 10rem;
+	flex-direction: column;
+}
+
+#generalInformationDiv2 > div
+{
+	padding-left: 0rem;
+	padding-right: 0rem;
+}
+
+#generalInformationDiv2 > div > h1
+{
+	margin-bottom: 7rem;
+}
+
+
+}
