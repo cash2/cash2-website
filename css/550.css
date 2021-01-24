@@ -11,9 +11,36 @@ h2
 	font-size: 2.5rem;
 }
 
+#bisqLogo
+{
+	height : 6rem;
+}
+
 #coinMarketCapLogo
 {
 	height : 5rem;
+}
+
+#discordLogo
+{
+	height : 8rem;
+}
+
+#contactUsDiv, 
+#disclaimerDiv, 
+#downloadsDiv,
+#exchangesDiv,
+#faqDiv,
+#generalInformationDiv1,
+#generalInformationDiv2,
+#generalInformationDiv3,
+#miningDiv,
+#paperWalletDiv,
+#priceDiv,
+#socialMediaDiv,
+#technicalDetailsDiv
+{
+	border-radius: 2rem;
 }
 
 #contactUsDiv > div > h1
@@ -27,10 +54,46 @@ h2
 	padding-right: 1rem;
 }
 
+#miningDiv > div > table tr td
+{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#miningDiv > div > table tr th
+{
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+#miningPoolDivContainer
+{
+	display: block;
+}
+
+#miningPoolsDiv
+{
+	margin-bottom: 6rem;
+}
+
+#miningPoolTableContainer
+{
+	display: none;
+}
 
 #priceHeaderSpan
 {
 	padding-right: 1rem;
+}
+
+#technicalDetailsDiv > h1
+{
+	text-align: center;
+}
+
+#youTubeLogo
+{
+	height : 4rem;
 }
 
 }

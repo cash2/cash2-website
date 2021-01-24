@@ -15,4 +15,24 @@
 	display: none;
 }
 
+#contactUsDiv > div > h1
+{
+	margin-bottom: 6rem;
+}
+
+#exchangesDiv > h1
+{
+	text-align: center;
+}
+
+#priceDiv > h1
+{
+	text-align: center;
+}
+
+#socialMediaDiv > h1
+{
+	text-align: center;
+}
+
 }

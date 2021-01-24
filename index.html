@@ -33,7 +33,6 @@
 									<li class="liLink"><a href="#faq">FAQ</a></li>
 									<li class="liLink"><a href="#generalInformation">General Information</a></li>
 									<li class="liLink"><a href="#mining">Mining</a></li>
-									<li class="liLink"><a href="#paperWallet">Paper Wallet</a></li>
 									<li class="liLink"><a href="#price">Price</a></li>
 									<li class="liLink"><a href="#socialMedia">Social Media</a></li>
 									<li class="liLink"><a href="https://github.com/cash2/cash2" target="_blank">Source Code</a></li>
@@ -129,7 +128,7 @@
 							<th>Bitcoin</th>
 						</tr>
 						<tr>
-							<td>Transaction time</td>
+							<td>Block time</td>
 							<td class="green bold center font3rem">9 seconds</td>
 							<td class="center">10 minutes</td>
 						</tr>
@@ -190,19 +189,27 @@
 			<div id="miningDiv">
 				<h1>Mining</h1>
 				<p>Miner's acutal hashrate may be less than the maximum due to Cash2's fast block times. Every effort is made to send payments out correctly, but pool errors can occasionally occur.</p>
-				<div class="tableContainer">
-					<table>
-						<tr>
-							<th>Mining Pool</th>
-							<th>Fee</th>
-							<th>Location</th>
-						</tr>
-						<tr>
-							<td><a href="https://cash2pool.us" target="_blank">cash2pool.us</a></td>
-							<td>1%</td>
-							<td>USA</td>
-						</tr>
-					</table>
+				<div id="miningPoolsDiv">
+					<h2>Mining Pools</h2>
+					<div id="miningPoolTableContainer" class="tableContainer">
+						<table>
+							<tr>
+								<th>Mining Pool</th>
+								<th>Fee</th>
+								<th>Location</th>
+							</tr>
+							<tr>
+								<td><a href="https://cash2pool.us" target="_blank">cash2pool.us</a></td>
+								<td>1%</td>
+								<td>USA</td>
+							</tr>
+						</table>
+					</div>
+					<div id="miningPoolDivContainer">
+						<p>Mining Pool : <a href="https://cash2pool.us" target="_blank">cash2pool.us</a></p>
+						<p>Fee: 1%</p>
+						<p>Location: USA</p>
+					</div>
 				</div>
 				<div id="recommendedHardwareDiv">
 					<h2>Recommended Hardware</h2>
@@ -244,7 +251,7 @@
 				<h1>Exchanges</h1>
 				<p><a href="https://www.southxchange.com/Market/Book/CASH2/BTC" target="_blank"><img id="southXchangeLogo" src="images/southXchangeLogo.png"></a></p>
 				<p><a href="https://c-patex.com/markets/cash2btc" target="_blank"><img id="cPatexLogo" src="images/cPatexLogo.jpg"/></a></p>
-				<p><a href="https://bisq.network" target="_blank"><img src="images/bisqLogo.svg"/></a></p>
+				<p><a href="https://bisq.network" target="_blank"><img id="bisqLogo" src="images/bisqLogo.svg"/></a></p>
 			</div>
 		</div>
 	</section>
@@ -266,62 +273,42 @@
 		<div id="technicalDetailsContainerDiv">
 			<div id="technicalDetailsDiv">
 				<h1>Technical Details</h1>
-				<table id="technicalDetailsTable">
-					<tr>
-						<td>Max Supply</td>
-						<td>15,000,000 CASH2</td>
-					</tr>
-					<tr>
-						<td>Block Time</td>
-						<td>9 seconds</td>
-					</tr>
-					<tr>
-						<td>Transaction Fee</td>
-						<td>0.01 CASH2</td>
-					</tr>
-					<tr>
-						<td>Code Family</td>
-						<td><a href="https://cryptonote.org/">CryptoNote</a></td>
-					</tr>
-					<tr>
-						<td>Hashing Algorithm</td>
-						<td><a href="https://blake2.net/">BLAKE2b</a></td>
-					</tr>  
-					<tr>
-						<td>Block Reward</td>
-						<td>0.894069671 or less</td>
-					</tr>
-					<tr>
-						<td>Smallet Unit</td>
-						<td>0.000000001 CASH2</td>
-					</tr>
-					<tr>
-						<td>Programming Language</td>
-						<td>C++</td>
-					</tr>
-				</table>
-			</div>
-		</div>
-	</section>
-	<section>
-		<span id="paperWallet"></span>
-		<div id="paperWalletContainerDiv">
-			<div id="paperWalletDiv">
-				<input type="hidden" value="" id="user_entropy_widget" oninput="js:checkEntropy();" />
-				<h1>Paper Wallet</h1>
-				<div>
-					<p>Address</p>
-					<pre id="address_widget"></pre>
+				<div class="tableContainer">
+					<table id="technicalDetailsTable">
+						<tr>
+							<td>Max Supply</td>
+							<td>15,000,000 CASH2</td>
+						</tr>
+						<tr>
+							<td>Block Time</td>
+							<td>9 seconds</td>
+						</tr>
+						<tr>
+							<td>Transaction Fee</td>
+							<td>0.01 CASH2</td>
+						</tr>
+						<tr>
+							<td>Code Family</td>
+							<td><a href="https://cryptonote.org/">CryptoNote</a></td>
+						</tr>
+						<tr>
+							<td>Hashing Algorithm</td>
+							<td><a href="https://blake2.net/">BLAKE2b</a></td>
+						</tr>  
+						<tr>
+							<td>Block Reward</td>
+							<td>0.894069671 or less</td>
+						</tr>
+						<tr>
+							<td>Smallet Unit</td>
+							<td>0.000000001 CASH2</td>
+						</tr>
+						<tr>
+							<td>Language</td>
+							<td>C++</td>
+						</tr>
+					</table>
 				</div>
-				<div>
-					<p>Spend private key</p>
-					<pre id="spend_key_widget"></pre>
-				</div>
-				<div>
-					<p>View private key</p>
-					<pre id="view_key_widget"></pre>
-				</div>
-				<p>Please write down and keep safe</p>
 			</div>
 		</div>
 	</section>
@@ -406,7 +393,6 @@
 	<section>
 		
 	</section>
-  <script src="js/cash2PaperWallet.js">// JavaScript for generating paper wallet</script>
   <script src="js/cash2.js"></script>
 </body>
 </html>
