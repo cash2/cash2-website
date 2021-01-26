@@ -391,6 +391,7 @@ ul li
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	flex-direction: column;
 	background-image: url("../images/4706610.svg");
 	background-position: center;
 	background-repeat: no-repeat;
